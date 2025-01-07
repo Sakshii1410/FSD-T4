@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+    <script type="text/javascript" language="javascript">
+        const person = { firstname: "Sakshi", lastname: "Panchal", age: 20 }
+        console.log(person.firstname)
+        document.write("Hello, My name is <br>" + person.firstname + person.lastname + ". My age is " + person.age)
+
+        const fruits = ["Banana", "Mango", "Apple", "Kiwi"];
+        console.log(fruits[3])
+
+        var i
+        var frt = new Array("Banana", "Mango", "Apple", "Kiwi")
+        for (i = 0; i < frt.length; i++) {
+            document.write(frt[i] + "<br>")
+        }
+
+        var a = [2, 4, 3, 1, 5]
+        for (let i = 0; i < frt.length; i++) {
+            document.write("Muitiplication is: " + a[i] * 2 + "<br>")
+        }
+
+        function fun(fname, lname) {
+            document.write("Hello " + fname + " " + lname)
+        }
+
+        function emp(id, name, age) {
+            this.id = id
+            this.name = name
+            this.age = age
+        }
+        let employee = new emp(1, "abc", 23)
+        document.write(employee.id + " " + employee.name)
+        console.log(employee.id + " " + employee.name)
+    </script>
+    <input type="button" onclick="fun('Sakshi','Panchal')" value="click">
+
+</body>
+
+</html>
