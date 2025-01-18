@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19_onmousedown</title>
+</head>
+
+<body>
+    <div onmousedown="mdown(this)" onmouseup="mup(this)"
+        style="background-color:cadetblue;width: 70px;height: 30px;padding: 20px;">
+        Click Me
+    </div>
+
+    <div onmousedown="mcdown(this)" onmouseup="mcup(this)" style="width: 70px;height: 30px;padding: 20px;"></div>
+
+    <div style="width: 50%;height: 50%;background-color: pink;" onmousedown="fun(event)">Click
+    </div>
+
+    <script>
+        function mdown(e) {
+            e.style.backgroundColor = "yellow"
+            e.innerHTML = "Clicked"
+        }
+
+        function mup(e) {
+            e.style.backgroundColor = "pink"
+            e.innerHTML = "Release"
+        }
+
+        function mcdown(e) {
+            e.style.backgroundColor = "yellow"
+            e.innerHTML = "Hmmmm"
+        }
+
+        function mcup(e) {
+            e.style.backgroundColor = "pink"
+            e.innerHTML = "OKKK"
+        }
+
+        function fun(e) {
+            val = e.button
+
+            switch (val) {
+                case 0: alert("left click")
+                    break;
+                case 1: alert("middle click")
+                    break;
+                case 2: alert("right click")
+            }
+        }
+    </script>
+</body>
+
+</html>

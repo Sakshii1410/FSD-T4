@@ -1,0 +1,38 @@
+<!-- WAJS to change text-color and backgraong-color on-Click using classname method -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_pop-up box</title>
+    <script type="text/javascript" language="javascript">
+        var ischg = false
+        function change() {
+            x = document.getElementsByClassName("p1")
+            for (i = 0; i < x.length; i++) {
+                if (ischg) {
+                    x[i].innerHTML = "P Tag"
+                    x[i].style.color = ""
+                    x[i].style.backgroundColor = ""
+
+                } else {
+                    x[i].innerHTML = "Changed Text"
+                    x[i].style.color = "white"
+                    x[i].style.backgroundColor = "gray"
+                }
+            }
+            ischg = !ischg
+        }
+    </script>
+</head>
+
+<body>
+    <p class="p1">P Tag</p>
+    <p>P Tag</p>
+    <p class="p1">P Tag</p>
+    <button onclick="change()">Click</button>
+</body>
+
+</html>

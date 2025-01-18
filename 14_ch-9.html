@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_pop-up box</title>
+
+</head>
+
+<body>
+    <p id="demo">HI</p>
+    <p></p>
+    <p></p>
+    <h1>To AJS</h1>
+    <script type="text/javascript" language="javascript">
+        document.getElementById("demo").innerHTML = "Welcome"
+        document.getElementById("demo").style.backgroundColor = "gray"
+        x = document.getElementsByTagName("p")
+
+        for (i = 1; i < x.length; i++) {
+            x[i].innerHTML = "HI"
+        }
+        x[1].innerHTML = "Hello"
+    </script>
+</body>
+
+</html>

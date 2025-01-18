@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" method="get" onsubmit="fun()">
+        <input type="text" name="fname" id="fname">
+        <input type="submit" value="Submit">
+        <br>
+        <input type="text" value="hello" onchange="fun2(this)">
+        <br>
+        <input type="text" value="hello" onfocus="this.style.backgroundColor='yellow'">
+        <br>
+        <input type="text" value="Hello" onblur="fun3(this)">
+    </form>
+    <script>
+        function fun() {
+            a = document.getElementById("fname")
+            alert("Welcome " + a.value)
+        }
+
+        function fun2(id) {
+            id.value = id.value.toUpperCase()
+        }
+
+        function fun3(id) {
+            id.value = id.value.toLowerCase()
+        } 
+    </script>
+</body>
+
+</html>

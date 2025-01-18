@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_pop-up box</title>
+    <script type="text/javascript" language="javascript">
+        function warn() {
+            alert("Warning Msg")
+            document.write("Danger Ahead <br>")
+        }
+
+        function pro() {
+            var data = prompt("Enter Value")
+            document.write("Welcome " + data)
+        }
+
+        function conf() {
+            var d = confirm("Do you want to continue?")
+            if (d == true) {
+                document.write("User want to continue")
+            } else {
+                document.write("<br>User doesn't want to continue")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="button" value="warn" onclick="warn()">
+    <input type="button" value="ok" onclick="pro()">
+    <input type="button" value="ok" onclick="conf()">
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun(id) {
+            id.bgColor = "blue"
+        }
+        function fun2(e) {
+            c = (e.key);
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' ||
+                c == 'O' || c == 'U') {
+                document.write("vowel is entered " + e.keyCode + " " + e.key);
+            }
+            else {
+                document.write(e.keyCode + " " + e.key);
+            }
+        }
+        function fun3(id) {
+            id.bgColor = "red";
+        }
+    </script>
+</head>
+
+<body onkeypress="fun2(event)" onkeyup="fun3(this)"> Click and press key to get key code and press function
+    key to change color
+</body>
+
+</html>

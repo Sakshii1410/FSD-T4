@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_pop-up box</title>
+    <script type="text/javascript" language="javascript">
+        var data = prompt("Enter String")
+        var char = prompt("Enter Charater")
+        if (data && char && char.length == 1) {
+            count = data.split(char).length - 1
+            console.log("The Charater Occurs: " + count)
+        } else {
+            console.log("Enter Valid Data")
+        }
+
+        var groceries = new Array({ product: "Apple", quantity: 4, price: 100 }, { product: "Kiwi", quantity: 5, price: 150 }, { product: "Milk", quantity: 1, price: 30 })
+        function caltotal(groceries) {
+            let total = 0
+            for (let i = 0; i < groceries.length; i++) {
+                const { quantity, price } = groceries[i]
+                total += quantity * price
+            }
+            return total
+        }
+        document.write("Total Bill : " + caltotal(groceries))
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

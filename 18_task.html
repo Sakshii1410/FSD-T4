@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_pop-up box</title>
+</head>
+
+<body>
+    <p id="a">P Tag-1</p>
+    <p class="b">P Tag-2</p>
+    <p>P Tag-3</p>
+
+    <button onclick="change()">Click</button>
+    <h1 onclick="ch(this)">Click to change</h1>
+
+    <script>
+        var a = document.getElementById("a")
+        var b = document.getElementsByClassName("b")
+        var c = document.getElementsByTagName("p")
+        function change() {
+            a.innerHTML = "Changed by id"
+            b[0].innerHTML = "Changed by class"
+            b[0].style.backgroundColor = "tomato"
+            b[0].style.fontSize = "30px"
+            c[2].innerHTML = "Changed by Element"
+            c[2].style.backgroundColor = "cyan"
+            c[2].style.color = "green"
+        }
+
+        function ch(id) {
+            id.innerHTML = "Changed Text"
+        }
+    </script>
+</body>
+
+</html>

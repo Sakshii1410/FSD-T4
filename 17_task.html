@@ -1,0 +1,40 @@
+<!-- WAJS to convert uppercase and lowercase to text on-click -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_pop-up box</title>
+    <script type="text/javascript" language="javascript">
+        function change() {
+            x = document.getElementsByClassName("main")
+            x[0].style.textTransform = "uppercase"
+        }
+        function changel() {
+            x = document.getElementsByClassName("main")
+            x[0].style.textTransform = "lowercase"
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <p class="main">Welcome</p>
+    <button onclick="change()">Click</button>
+    <button onclick="changel()">Click</button>
+
+    <p id="i1">Para 1</p>
+    <p id="i2">Para 2</p>
+
+    <script>
+        var i1 = document.getElementById("i1")
+        var i2 = document.getElementById("i2")
+        i1.align = "center"
+        i2.setAttribute("align", "right")
+    </script>
+</body>
+
+</html>

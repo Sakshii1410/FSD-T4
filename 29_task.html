@@ -1,0 +1,35 @@
+<!-- WAJSP that Accepts integer having 4 digits only input should not accept characters of letters and sp symbol -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metachar</title>
+</head>
+
+<body>
+
+    <script>
+        function fun() {
+            u = document.getElementById("t1").value
+            if (u == "") {
+                alert("Fill the field..!!")
+            } else if (u.length != 4) {
+                alert("password length must be 4")
+            } else if (isNaN(u)) {
+                alert("Enter only digits")
+            } else {
+                alert("Done..!!")
+            }
+        }
+    </script>
+
+    <form>
+        <input type="text" id="t1">
+        <input type="submit" onclick="fun()">
+    </form>
+</body>
+
+</html>

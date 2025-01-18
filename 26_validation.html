@@ -1,0 +1,38 @@
+<!-- WAJSC to display alert with pop-up text msg "Enter something" if input field is empty on clicking 
+     submit button -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>/Metachar</title>
+
+</head>
+
+<body>
+
+    <script>
+        function fun() {
+            // pat = /abc/
+            // pat = /abc/i
+            // pat = /[abc]/   
+            pat = /[^abc]/
+            // pat = /[0-9]/
+            // pat = /[^0-9]/
+            // pat = /[x|y]/
+            u = document.getElementById("t1").value
+            if (pat.test(u)) {
+                alert("perfect & Value is " + u)
+            } else {
+                alert("not")
+            }
+        }
+    </script>
+
+    <input type="text" id="t1">
+    <input type="submit" onclick="fun()">
+</body>
+
+</html>

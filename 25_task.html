@@ -1,0 +1,30 @@
+<!-- WAJSC to display alert with pop-up text msg "Enter something" if input field is empty on clicking 
+     submit button -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun() {
+            obj1 = document.f1.t1.value
+            obj2 = document.f1.t2.value
+            if (obj1 == "" || obj2 == "") {
+                alert("Enter something")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="f1" onsubmit="fun()">
+        <input type="text" name="t1">
+        <input type="password" name="t2">
+        <input type="submit">
+    </form>
+</body>
+
+</html>
