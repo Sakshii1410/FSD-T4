@@ -1,0 +1,133 @@
+<!-- Write Es6 function to be called on button click. Take one division with some text and no decoration 
+     initially. Take font size and style as default argument and pass background color and text color while 
+     passing argument to function style should change on button click. -->
+
+<!-- WAP to display form elements value firstname, lastname, gender and selected game and submit. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="a">Hello</div>
+    <button onclick="changeStyle('pink','blue')">click here</button>
+    <form name="f1" method="get">
+        Firstname : <input type="text" name="t1">
+        <br>Lastname : <input type="text" name="t2">
+        <br>Gender : <input type="radio" name="t3" value="male">Male
+        <input type="radio" name="t3" value="female">Female
+        <br>Select Game :
+        <input type="checkbox" name="t4" value="football"> Football
+        <input type="checkbox" name="t4" value="cricket"> Cricket
+        <input type="checkbox" name="t4" value="basketball"> Basketball
+        <br>
+        <input type="submit" onclick="fun()">
+    </form>
+
+    <script>
+        function changeStyle(backgroundColor, textColor, fontSize = '50px', fontStyle = 'italic') {
+            a = document.getElementById("a")
+            a.style.backgroundColor = backgroundColor
+            a.style.color = textColor
+            a.style.fontSize = fontSize
+            a.style.fontStyle = fontStyle
+        }
+
+        function fun() {
+            obj1 = document.f1.t1.value
+            obj2 = document.f1.t2.value
+            obj3 = document.f1.t3.value
+            obj = document.f1.t4.value
+            obj4 = document.getElementsByName("t4")
+
+            var hob = "";
+            for (j = 0; j < obj4.length; j++) {
+                if (obj4[j].checked) {
+                    hob = hob + " " + obj4[j].value;
+
+                }
+            }
+            localStorage.setItem('fname', obj1)
+            localStorage.setItem('lname', obj2)
+            localStorage.setItem('gender', obj3)
+            localStorage.setItem('game', hob)
+
+            console.log(localStorage.getItem('fname'))
+            console.log(localStorage.getItem('lname'))
+            console.log(localStorage.getItem('gender'))
+            console.log(localStorage.getItem('game'))
+
+            document.write("First name: " + obj1);
+            document.write("<br>Last name: " + obj2);
+            document.write("<br>Gender: " + obj3);
+            document.write("<br>Game: " + hob);
+        }
+
+        list = [1, 2, 3]
+        for (let score of list) {
+            console.log(score)
+        }
+        for (let key in list) {
+            console.log(key)
+            console.log(list[key])
+        }
+
+        for (let [index, score] of list.entries()) {
+            console.log(index, score)
+        }
+
+        // Using ES6 sort string alphabetically stored in array.
+        let fruits = ['banana', 'apple', 'cherry']
+
+        // for(let f in fruits){
+        //     for()
+        // }
+
+        let map = new Map()
+        map.set("ABC", "faculty")
+        map.set("XYZ", "Dean")
+        map.set("PQR", "Peon")
+        map.set("JKL", "Admin")
+        console.log(map)
+        map.delete("PQR")
+        console.log(map)
+        map.set("JKL", "student")
+        console.log(map)
+
+        let map1 = new Map([["A", "Apple"], ["B", "Banana"], ["C", "Coffee"], ["D", "Dates"]])
+        console.log(map1)
+
+        s = "this is demo"
+        s1 = "AAA"
+        s2 = "ABC"
+
+        console.log(s.startsWith("this"))
+        console.log(s.startsWith("this", 8))
+        console.log(s.startsWith("demo", 8))
+        console.log(s.endsWith("demo", 12))
+        console.log(s.includes("is"))
+
+        const Nation = ['Peacock', 'Rupees', 'Ganga'];
+        const [Bird, Currency, River] = Nation
+        console.log(`${Bird} ${Currency} ${River}`);
+
+        var colors = ["Violet", "Indigo", "Blue", "Green", "Yellow", "Orange", "Red"];
+        // destructuring assignment 
+        var [color1, , color3, , color5] = colors; //Leave space for unpick elements 
+        console.log(color1); // Violet 
+        console.log(color3); // Blue 
+        console.log(color5); // Yellow
+
+        let e = { firstname: "abc", lastname: "def" };
+        let { firstname: fname, lastname: lname } = e
+        document.write(`Hello User : first:${fname}, last:${lname}`);
+    </script>
+</body>
+
+</html>                                                                                                                                  

@@ -1,26 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+    <p onclick="fun()">Max Value from above array is = </p>
+    <p id="demo"></p>
     <script>
-        ans=10  
+        ans = 10
         console.log(`Welcome
         Answer = ${ans}`)
 
-        fun1 = ()=>"hello world"
+        fun1 = () => "hello world"
         console.log(fun1())
 
-        fun2 = val=> `hello ${val}`
+        fun2 = val => `hello ${val}`
         console.log(fun2('world'))
 
-        const add = (a,b) => `${a+b}`
-        console.log(`Addition = ${add(5,9)}`)
+        const add = (a, b) => `${a + b}`
+        console.log(`Addition = ${add(5, 9)}`)
 
         a = `${ans}`
+
+        odd = [1, 2, 4]
+        combine = [5, 7, 8, ...odd]
+        console.log(combine)
+
+        function fun() {
+            const num1 = [23, 55, 21, 87, 56]
+            const num2 = [15, 16, 18, 99]
+            const fnum = [...num1, ...num2]
+            let maxvalue = Math.max(...fnum)
+            console.log(fnum)
+            console.log(...fnum)
+            document.getElementById("demo").innerHTML = maxvalue
+
+            const arr = ["abc", "pqr", "xyz"]
+            const obj = { ...arr }
+            console.log(obj)
+        }
+
+        function fun(...rest) {
+            console.log(rest)
+        }
+        fun(1, 2, 3, 4, 5)
+
+        function fun(a, b, ...rest) {
+            console.log(rest)
+            console.log(rest.indexOf(3))
+            console.log(rest.indexOf(4))
+        }
+        fun(1, 2, 3, 4, 5)
+
+        myfun = (...arg) => arg.length
+        console.log(`length = ${myfun(10, 20, 30, 40, 50)}`)
+
+
     </script>
 </body>
+
 </html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // (function (a) {
+        //     return (function () {
+        //         document.write(a)
+        //         a = 5
+        //     })()
+        // })(10)
+
+        // book = new Array(1, 2, 3, 4, 5, 6, 7, 8)
+        // document.write(book[1] + "<br>")
+        // book[10] = 10
+        // document.write(book[10])
+
+        // var a = 10
+        // if (a > 4) {
+        //     a = 100
+        //     console.log(a)
+        // }
+        // console.log(a)
+
+        // class demo {
+        //     constructor(p, q) {
+        //         this.p = p
+        //         this.q = q
+        //     }
+
+        //     disp = () => {
+        //         console.log(p + q)
+        //     }
+        // }
+
+        // let o = new demo(2, 3)
+        // o.disp()
+
+        const c = () => {
+            args = [10, 20, 30, 40, 50]
+            args1 = [60, 70]
+            arg = [...args, args1]
+            let sum = 0
+            for (x in arg) {
+                sum = sum + " " + arg[x]
+                console.log(sum)
+            }
+        }
+        c()
+    </script>
+</body>
+
+</html>

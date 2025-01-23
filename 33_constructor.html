@@ -1,0 +1,47 @@
+<!-- WES6S that create class Time having menbers hour,minit,second create 2 time obj t1 t2 and add both the time 
+ objs so that it should return in 3rd time object named t. 3rd time obj should have h m s such that 
+ addition of second exeed 60 m should be incremented if m exceed 60 hour should be incremented. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constructor</title>
+</head>
+
+<body>
+    <script>
+        class Time {
+            constructor(h, m, s) {
+                this.hour = h;
+                this.minute = m;
+                this.second = s;
+            }
+        }
+
+        add = (t1, t2) => {
+            h = t1.hour + t2.hour
+            m = t1.minute + t2.minute
+            s = t1.second + t2.second
+
+            if (m > 60) {
+                h += 1
+                m -= 60
+            }
+            if (s > 60) {
+                m += 1
+                s -= 60
+            }
+
+            return (new Time(h, m, s))
+        }
+        const t1 = new Time(1, 20, 30);
+        const t2 = new Time(2, 56, 45);
+        console.log(add(t1, t2))
+
+    </script>
+</body>
+
+</html>
